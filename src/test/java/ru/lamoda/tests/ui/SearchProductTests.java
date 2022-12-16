@@ -8,6 +8,7 @@ import ru.lamoda.pages.MainPage;
 import ru.lamoda.pages.SearchPage;
 import ru.lamoda.tests.BaseTest;
 
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static io.qameta.allure.Allure.step;
 
 public class SearchProductTests extends BaseTest {
@@ -18,8 +19,7 @@ public class SearchProductTests extends BaseTest {
     @ValueSource(strings = {"Футболки", "Шорты"})
     @ParameterizedTest(name = "{0}")
     @DisplayName("Поиск товара по параметру")
-    void testSearchProduct(String searchQuery)
-    {
+    void testSearchProduct(String searchQuery) {
         step("Открываем главную страницу", () -> {
             mainPage.openPage()
                     .cookieButtonClick();

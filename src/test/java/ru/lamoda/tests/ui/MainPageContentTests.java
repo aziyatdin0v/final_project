@@ -64,7 +64,7 @@ public class MainPageContentTests extends BaseTest {
             mainPage.openPage()
                     .cookieButtonClick();
         });
-        step("Проверяемтекст рекламного слогана", () -> {
+        step("Проверяем текст рекламного слогана", () -> {
             mainPage.checkAdvertisingTitle();
         });
     }
