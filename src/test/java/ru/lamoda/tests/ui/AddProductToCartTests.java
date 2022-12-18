@@ -12,7 +12,7 @@ import ru.lamoda.tests.BaseTest;
 public class AddProductToCartTests extends BaseTest {
     AddToCartPage addToCartPage = new AddToCartPage();
 
-    @Tag("ui")
+    @Tag("ui_fast_test")
     @Test
     @Feature("UI тесты lamoda.ru")
     @Story("Добавление товара в корзину")
