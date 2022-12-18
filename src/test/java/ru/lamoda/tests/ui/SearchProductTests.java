@@ -15,7 +15,7 @@ public class SearchProductTests extends BaseTest {
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
 
-    @Tag("ui_tests")
+    @Tag("ui")
     @Feature("UI тесты lamoda.ru")
     @Story("Поиск товара")
     @Severity(SeverityLevel.NORMAL)
