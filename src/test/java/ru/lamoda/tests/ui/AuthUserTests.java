@@ -8,9 +8,13 @@ import ru.lamoda.config.Project;
 import ru.lamoda.pages.AuthUserPage;
 import ru.lamoda.pages.MainPage;
 import ru.lamoda.tests.BaseTest;
+
 import static io.qameta.allure.Allure.step;
 
 @Owner("aziyatdinov")
+@Feature("UI тесты lamoda.ru")
+@Story("Авторизация пользователя")
+
 public class AuthUserTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
@@ -18,8 +22,6 @@ public class AuthUserTests extends BaseTest {
 
     @Tag("ui")
     @Test
-    @Feature("UI тесты lamoda.ru")
-    @Story("Авторизация пользователя")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Авторизация пользователя (вход в личный кабинет)")
     void testAuthUser() {
@@ -39,11 +41,11 @@ public class AuthUserTests extends BaseTest {
         step("Нажимаем Войти", () -> {
             authUserPage.enterSubmit();
         });
-        step("Проверяем успешную авторизацию",()-> {
+        step("Проверяем успешную авторизацию", () -> {
             authUserPage.modalWindowClose();
             authUserPage.checkAuth(Project.config.userEmail());
         });
-        step("Выходим из личного кабинета",()-> {
+        step("Выходим из личного кабинета", () -> {
             authUserPage.logOut();
         });
     }

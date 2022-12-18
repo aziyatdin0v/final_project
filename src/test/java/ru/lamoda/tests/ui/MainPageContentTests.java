@@ -15,28 +15,30 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 
 @Owner("aziyatdinov")
+@Feature("UI тесты lamoda.ru")
+@Story("Главная страница lamoda.ru")
+
 public class MainPageContentTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
 
     @Tag("ui")
     @Test
-    @Feature("UI тесты lamoda.ru")
-    @Story("Главная страница lamoda.ru")
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Проверка заголовка во вкладке браузера")
+    @DisplayName("Проверка заголовков стартовой страницы")
     public void testTitle() {
         step("Открываем главную страницу и проверяем заголовок во вкладке браузера", () -> {
             mainPage.openPage()
                     .cookieButtonClick();
             assertThat(title(), containsString(mainPage.TITLE));
         });
+        step("Проверяем наличие заголовка страницы", () -> {
+            mainPage.checkHeader();
+        });
     }
 
     @Tag("ui")
     @Test
-    @Feature("UI тесты lamoda.ru")
-    @Story("Главная страница lamoda.ru")
     @Severity(SeverityLevel.NORMAL)
     @CsvSource(value = {
             "Женщинам, women",
@@ -44,14 +46,11 @@ public class MainPageContentTests extends BaseTest {
             "Детям, children"
     })
     @ParameterizedTest(name = "\"{0}\"")
-    @DisplayName("Проверка заголовка баннера и наличия раздела")
+    @DisplayName("Проверка наличия разделов на стартовой странице")
     void testGenderMenu(String gender, String expectedText) {
         step("Открываем главную страницу", () -> {
             mainPage.openPage()
                     .cookieButtonClick();
-        });
-        step("Проверяем наличие заголовка", () -> {
-            mainPage.checkHeader();
         });
         step("Переходим в раздел " + gender + "", () -> {
             mainPage.chooseChapter(expectedText);
@@ -67,8 +66,6 @@ public class MainPageContentTests extends BaseTest {
 
     @Tag("ui")
     @Test
-    @Feature("UI тесты lamoda.ru")
-    @Story("Главная страница lamoda.ru")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка рекламного слогана")
     void testAdvertising() {
@@ -83,8 +80,6 @@ public class MainPageContentTests extends BaseTest {
 
     @Tag("ui")
     @Test
-    @Feature("UI тесты lamoda.ru")
-    @Story("Главная страница lamoda.ru")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка наличия блока c социальными сетями в подвале страницы")
     void testSocialNetwork() {
@@ -96,6 +91,4 @@ public class MainPageContentTests extends BaseTest {
             mainPage.checkSocialNetworkButton();
         });
     }
-
 }
-
