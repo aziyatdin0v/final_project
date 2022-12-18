@@ -44,7 +44,6 @@ public class MainPageContentTests extends BaseTest {
             "Детям, children"
     })
     @ParameterizedTest(name = "Проверка заголовка баннера и наличия раздела \"{0}\"")
-    @DisplayName("Проверка заголовка баннера и наличия разделов на нем")
     void testGenderMenu(String gender, String expectedText) {
         step("Открываем главную страницу", () -> {
             mainPage.openPage()
