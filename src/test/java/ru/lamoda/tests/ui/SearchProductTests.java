@@ -13,14 +13,14 @@ import ru.lamoda.tests.BaseTest;
 import static io.qameta.allure.Allure.step;
 
 @Owner("aziyatdinov")
-@Feature("UI тесты lamoda.ru")
-@Story("Поиск товара")
 
 public class SearchProductTests extends BaseTest {
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
 
     @Tag("ui")
+    @Feature("UI тесты lamoda.ru")
+    @Story("Поиск товара")
     @Severity(SeverityLevel.NORMAL)
     @ValueSource(strings = {"Футболки", "Шорты"})
     @ParameterizedTest(name = "{0}")

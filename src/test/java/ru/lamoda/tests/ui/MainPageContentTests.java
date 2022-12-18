@@ -15,14 +15,15 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 
 @Owner("aziyatdinov")
-@Feature("UI тесты lamoda.ru")
-@Story("Главная страница lamoda.ru")
 
 public class MainPageContentTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
 
     @Tag("ui")
+    @Test
+    @Feature("UI тесты lamoda.ru")
+    @Story("Главная страница lamoda.ru")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка заголовков стартовой страницы")
     public void testTitle() {
@@ -37,7 +38,8 @@ public class MainPageContentTests extends BaseTest {
     }
 
     @Tag("ui")
-    @Test
+    @Feature("UI тесты lamoda.ru")
+    @Story("Главная страница lamoda.ru")
     @Severity(SeverityLevel.NORMAL)
     @CsvSource(value = {
             "Женщинам, women",
@@ -65,6 +67,8 @@ public class MainPageContentTests extends BaseTest {
 
     @Tag("ui")
     @Test
+    @Feature("UI тесты lamoda.ru")
+    @Story("Главная страница lamoda.ru")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка рекламного слогана")
     void testAdvertising() {
@@ -79,6 +83,8 @@ public class MainPageContentTests extends BaseTest {
 
     @Tag("ui")
     @Test
+    @Feature("UI тесты lamoda.ru")
+    @Story("Главная страница lamoda.ru")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка наличия блока c социальными сетями в подвале страницы")
     void testSocialNetwork() {
