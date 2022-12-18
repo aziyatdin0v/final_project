@@ -1,9 +1,6 @@
 package ru.lamoda.tests.ui;
 
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,9 +8,9 @@ import ru.lamoda.config.Project;
 import ru.lamoda.pages.AuthUserPage;
 import ru.lamoda.pages.MainPage;
 import ru.lamoda.tests.BaseTest;
-
 import static io.qameta.allure.Allure.step;
 
+@Owner("aziyatdinov")
 public class AuthUserTests extends BaseTest {
 
     MainPage mainPage = new MainPage();

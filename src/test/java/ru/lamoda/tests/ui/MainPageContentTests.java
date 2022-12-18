@@ -1,5 +1,6 @@
 package ru.lamoda.tests.ui;
 
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -13,12 +14,16 @@ import static io.qameta.allure.Allure.step;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 
+@Owner("aziyatdinov")
 public class MainPageContentTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
 
     @Tag("ui")
     @Test
+    @Feature("UI тесты lamoda.ru")
+    @Story("Главная страница lamoda.ru")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка заголовка во вкладке браузера")
     public void testTitle() {
         step("Открываем главную страницу и проверяем заголовок во вкладке браузера", () -> {
@@ -29,6 +34,10 @@ public class MainPageContentTests extends BaseTest {
     }
 
     @Tag("ui")
+    @Test
+    @Feature("UI тесты lamoda.ru")
+    @Story("Главная страница lamoda.ru")
+    @Severity(SeverityLevel.NORMAL)
     @CsvSource(value = {
             "Женщинам, women",
             "Мужчинам, men",
@@ -58,6 +67,9 @@ public class MainPageContentTests extends BaseTest {
 
     @Tag("ui")
     @Test
+    @Feature("UI тесты lamoda.ru")
+    @Story("Главная страница lamoda.ru")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка рекламного слогана")
     void testAdvertising() {
         step("Открываем главную страницу", () -> {
@@ -71,6 +83,9 @@ public class MainPageContentTests extends BaseTest {
 
     @Tag("ui")
     @Test
+    @Feature("UI тесты lamoda.ru")
+    @Story("Главная страница lamoda.ru")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка наличия блока c социальными сетями в подвале страницы")
     void testSocialNetwork() {
         step("Открываем главную страницу", () -> {
