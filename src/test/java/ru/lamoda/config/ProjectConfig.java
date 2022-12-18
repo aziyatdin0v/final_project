@@ -6,23 +6,20 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "system:properties",
         "classpath:config/local.properties",
-        "classpath:config/remote.properties"
+        "classpath:config/credentials.properties"
 })
 
-public interface WebDriverConfig extends Config {
+public interface ProjectConfig extends Config {
 
+    @DefaultValue("https://www.lamoda.ru/")
+    String baseUrl();
     @DefaultValue("chrome")
     String browser();
-    @DefaultValue("https://www.lamoda.ru")
-    String baseUrl();
     @DefaultValue("1920x1080")
     String browserSize();
-    @Key("browserVersion")
     @DefaultValue("108.0")
     String browserVersion();
-
+    String remoteDriverUrl();
     String userEmail();
     String userPassword();
-    String remoteUrl();
-
 }

@@ -8,14 +8,13 @@ import ru.lamoda.pages.MainPage;
 import ru.lamoda.pages.SearchPage;
 import ru.lamoda.tests.BaseTest;
 
-import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static io.qameta.allure.Allure.step;
 
 public class SearchProductTests extends BaseTest {
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
 
-    @Tag("ui")
+    @Tag("ui_tests")
     @ValueSource(strings = {"Футболки", "Шорты"})
     @ParameterizedTest(name = "{0}")
     @DisplayName("Поиск товара по параметру")

@@ -24,5 +24,4 @@ public class AddProductToCartTests extends BaseTest {
                 .addProductToCart()
                 .checkPopup();
     }
-
 }

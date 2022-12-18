@@ -30,7 +30,7 @@ allure
             }
         }
 
-compileTestJava {
+tasks.withType(JavaCompile){
     options.encoding = 'UTF-8'
 }
 
@@ -48,7 +48,6 @@ dependencies {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-    useJUnitPlatform()
 
     testLogging {
         lifecycle {
