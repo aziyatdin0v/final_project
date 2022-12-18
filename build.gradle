@@ -62,7 +62,7 @@ task ui_tests(type: Test) {
     }
 }
 
-task ui_tests(type: Test) {
+task ui_tests_fast(type: Test) {
     useJUnitPlatform {
         includeTags "ui_fast_test"
     }
