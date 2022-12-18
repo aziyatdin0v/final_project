@@ -21,7 +21,6 @@ public class SearchProductTests extends BaseTest {
     SearchPage searchPage = new SearchPage();
 
     @Tag("ui")
-    @Test
     @Severity(SeverityLevel.NORMAL)
     @ValueSource(strings = {"Футболки", "Шорты"})
     @ParameterizedTest(name = "{0}")

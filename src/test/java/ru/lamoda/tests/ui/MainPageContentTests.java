@@ -23,7 +23,6 @@ public class MainPageContentTests extends BaseTest {
     MainPage mainPage = new MainPage();
 
     @Tag("ui")
-    @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка заголовков стартовой страницы")
     public void testTitle() {
