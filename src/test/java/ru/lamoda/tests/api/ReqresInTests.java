@@ -22,7 +22,7 @@ import static ru.lamoda.tests.api.specs.SpecsReqres.responseSpec;
 @Owner("aziyatdinov")
 @Story("ReqresIn")
 @Feature("API test")
-@Tags({@Tag("all_tests")})
+@Tags({@Tag("api")})
 
 public class ReqresInTests {
     @Test
