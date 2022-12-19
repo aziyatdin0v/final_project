@@ -108,21 +108,6 @@ public class ReqresInTests {
     }
 
     @Test
-    @DisplayName("Получение одного пользователя")
-    void singleUserWithLombok() {
-        int expectedId = 2;
-        Users userResponse = given().spec(request)
-                .when()
-                .pathParam("id", "2")
-                .get("/users/{id}")
-                .then()
-                .spec(responseSpec)
-                .extract().as(Users.class);
-
-        assertEquals(expectedId, userResponse.getId());
-    }
-
-    @Test
     @DisplayName("Проверка id и email пользователя")
     void checkIdAndEmailOfFeaturedUser() {
         Users userResponse = given().spec(request)
@@ -131,7 +116,6 @@ public class ReqresInTests {
                 .get("/users/{id}")
                 .then()
                 .spec(responseSpec)
-                .statusCode(200)
                 .extract().jsonPath().getObject("data", Users.class);
 
         assertEquals(2, userResponse.getId());

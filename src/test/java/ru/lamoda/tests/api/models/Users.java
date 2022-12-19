@@ -7,9 +7,5 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Users {
     private Integer id;
-    private String email;
-    private String password;
-    private String firstName;
-    private String lastName;
-    private String job;
+    private String email, password, firstName, lastName, job;
 }

@@ -23,6 +23,7 @@ public class SpecsReqres {
             .log(STATUS)
             .log(BODY)
             .expectStatusCode(201)
-            .expectBody("name", notNullValue())
+            .expectStatusCode(200)
+            //.expectBody("name", notNullValue())
             .build();
 }
