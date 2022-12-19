@@ -16,7 +16,6 @@ public class AddToCartPage {
             addCartButton = $("._wrapper_lky3q_2 .x-button"),
             popupText = $(".d-modal__frame .d-modal__header");
 
-
     public AddToCartPage openPage() {
         open(URL_PRODUCT);
         return this;
@@ -27,7 +26,6 @@ public class AddToCartPage {
         chooseDropdownSize.click();
         return this;
     }
-
 
     public AddToCartPage addProductToCart() {
         addCartButton.click();

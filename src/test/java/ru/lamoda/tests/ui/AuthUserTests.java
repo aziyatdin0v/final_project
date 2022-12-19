@@ -12,6 +12,8 @@ import ru.lamoda.tests.BaseTest;
 import static io.qameta.allure.Allure.step;
 
 @Owner("aziyatdinov")
+@Feature("UI тесты lamoda.ru")
+@Story("Авторизация пользователя")
 
 public class AuthUserTests extends BaseTest {
 
@@ -20,8 +22,6 @@ public class AuthUserTests extends BaseTest {
 
     @Tag("ui")
     @Test
-    @Feature("UI тесты lamoda.ru")
-    @Story("Авторизация пользователя")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Авторизация пользователя (вход в личный кабинет)")
     void testAuthUser() {
