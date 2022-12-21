@@ -16,20 +16,20 @@ def allureVersion = "2.20.1",
     ownerVersion = "1.0.12",
     jacksonDatabindVersion = "2.14.1"
 
-    allure
-{
-    report {
-        version.set(allureVersion)
-    }
-    adapter {
-        aspectjWeaver.set(true)
-        frameworks {
-            junit5 {
-                adapterVersion.set(allureVersion)
+allure
+        {
+            report {
+                version.set(allureVersion)
+            }
+            adapter {
+                aspectjWeaver.set(true)
+                frameworks {
+                    junit5 {
+                        adapterVersion.set(allureVersion)
+                    }
+                }
             }
         }
-    }
-}
 
 dependencies {
     testImplementation(
@@ -50,27 +50,22 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    if (System.getProperty("threads") != null) {
+        systemProperties += [
+                'junit.jupiter.execution.parallel.enabled'                 : true,
+                'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
+                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
+                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
+                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
+        ]
+    }
 
     testLogging {
         lifecycle {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
-    }
-}
-
-test {
-    useJUnitPlatform()
-}
-
-task ui_tests(type: Test) {
-    useJUnitPlatform {
-        includeTags "ui"
-    }
-}
-
-task api_test(type: Test) {
-    useJUnitPlatform {
-        includeTags "api"
     }
 }

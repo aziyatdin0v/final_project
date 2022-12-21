@@ -18,9 +18,8 @@ public class AuthUserPage {
             modalWindow = $(".d-modal"),
             modalWindowButton = $(".d-modal__bottom .x-button"),
             profileButton = $x("//a[text()=\"Профиль\"]"),
-            userDataButton = $("a[href='/customer/account/?sitelink=profile_hover_menu']"),
 
-            emailCheck = $("._root_lx6hi_15 ._row_lx6hi_2", 1).lastChild(),
+            emailCheck = $("._infoWrapper_14lbb_13"),
 
             logOutButton = $x("//a[text()=\"Выйти\"]");
 
@@ -53,7 +52,6 @@ public class AuthUserPage {
 
     public AuthUserPage checkAuth(String value) {
         profileButton.hover();
-        userDataButton.click();
         emailCheck.shouldHave(text(value));
         return this;
     }
