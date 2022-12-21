@@ -2,15 +2,15 @@
 
 ## :open_book: Содержание:
 
-* [Технологии, используемые в данном проекте](#gear-Технологии-используемые-в-данном-проекте)
-* [Тест кейсы](#test_cases-Тест-кейсы)
-* [Запуск тестов из терминала]()
-* [Запуск тестов в Jenkins]()
-* [Отчеты]()
-* * [Allure]
-* * [Telegram]
-* [Видео прохождения тестов]()
-* [Интеграция с AllureTestOps]()
+- [Технологии, используемые в данном проекте](#gear-Технологии-используемые-в-данном-проекте)
+- [Тест кейсы](#test_cases-Тест-кейсы)
+- [Запуск тестов из терминала (локально)]()
+- [Запуск тестов в Jenkins]()
+- [Отчеты]()
+- - [Allure]
+- - [Telegram]
+- [Видео прохождения тестов]()
+- [Интеграция с AllureTestOps]()
 
 ## :gear: Технологии, используемые в данном проекте
 
@@ -24,7 +24,7 @@
 <a href="https://aerokube.com/selenoid/"><img src="images/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid" title="Selenoid"/></a>
 <a href="https://github.com/allure-framework/allure2"><img src="images/logo/Allure_Report.svg" width="50" height="50"  alt="Allure" title="Allure"/></a>
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins" title="Jenkins"/></a>
-<a href="https://web.telegram.org/"><img width="50" height="50"  alt="Telegram" src="images\logo\Telegram.svg" title="Telegram"></a>
+<a href="https://web.telegram.org/"><img src="images\logo\Telegram.svg" width="50" height="50" alt="Telegram" title="Telegram"></a>
 </p>
 
 ## :test_cases: Тест кейсы
@@ -41,4 +41,4 @@
 gradle clean test 
 ```
 
-## <img width="4%" title="Jenkins" src="img/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_web/)
+## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_web/)
