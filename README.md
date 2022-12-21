@@ -5,9 +5,9 @@
 - [Технологии, используемые в данном проекте](#gear-Технологии-используемые-в-данном-проекте)
 - [Тест кейсы](#heavy_check_mark-Тест-кейсы)
 - [Запуск тестов из терминала (локально)](#computer-запуск-тестов-из-терминала)
-- [Запуск тестов в Jenkins]()
-- [Allure отчет]()
-- [Уведомления в Telegram]()
+- [Запуск тестов в Jenkins](#-запуск-тестов-из-jenkins)
+- [Allure отчет](#-allure)
+- [Уведомления в Telegram](#-telegram)
 - [Видео прохождения тестов]()
 - [Интеграция с AllureTestOps]()
 
@@ -25,6 +25,11 @@
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins" title="Jenkins"/></a>
 <a href="https://web.telegram.org/"><img src="images\logo\Telegram.svg" width="50" height="50" alt="Telegram" title="Telegram"></a>
 </p>
+В данном проекте автотесты написаны на **Java** с использованием фреймворка для тестирования **Selenide**. Для сборки проекта в среде **IntelliJ IDEA** используется **Gradle**.
+**JUnit5** задействован в качестве фреймворка модульного тестирования. Запуск тестов выполняется из **Jenkins**. **Selenoid** используется для запуска браузеров в контейнерах **Docker**.
+
+**Allure Report**, **AllureTestOps** и **Telegram Bot** используются для визуализации результатов тестирования.
+
 
 ## :heavy_check_mark: Тест кейсы
 - Добавление товара в корзину;
@@ -42,15 +47,31 @@ gradle clean test
 
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_web/)
 Для запуска тестов из Jenkins:
-1. Необходимо нажать кнопку "Собрать с параметрами".
-   <img src="img/screen/Screenshot_7.jpg" alt="Jenkins"/>
-2. Выбрать параметры.
-   <img src="img/screen/Screenshot_8.jpg" alt="Jenkins"/>
-3. Нажать кнопку "Собрать".
+1. Необходимо нажать кнопку "Собрать с параметрами" и выбрать параметры.
+   <img src="images/screen/Screenshot_1.png" alt="Jenkins"/>
+2. Нажать кнопку "Собрать".
 
 ### :heavy_plus_sign: Параметры сборки
 
-> - BROWSER (браузер)
-> - VERSION (версия браузера)
-> - RESOLUTION (размер окна браузера)
-> - BASEURL (адрес сайта)
+> - browse (браузер)
+> - browserVersion (версия браузера)
+> - browserSize (размер окна браузера)
+> - remoteDriverUrl (url адрес Selenoid)
+> - videoStorage (url адрес с видео прохождения тестов)
+
+## :bar_chart: Отчеты о прохождении тестов доступны в Allure
+### <img src="images/logo/Allure_Report.svg" alt="Allure"/> Allure
+
+#### Главная страница
+
+<img src="images/screen/Screenshot_2.png" alt="Allure"/>
+
+#### Графики
+
+<img src="images/screen/Screenshot_3.png" alt="Allure"/>
+
+#### Тесты
+
+<img src="images/screen/Screenshot_4.png" alt="Allure"/>
+
+### <img width="3%" title="Telegram" src="images/screen/Screenshot_5.png"> Telegram
