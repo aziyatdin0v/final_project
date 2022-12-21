@@ -25,6 +25,7 @@
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins" title="Jenkins"/></a>
 <a href="https://web.telegram.org/"><img src="images\logo\Telegram.svg" width="50" height="50" alt="Telegram" title="Telegram"></a>
 </p>
+
 В данном проекте автотесты написаны на **Java** с использованием фреймворка для тестирования **Selenide**. Для сборки проекта в среде **IntelliJ IDEA** используется **Gradle**.
 **JUnit5** задействован в качестве фреймворка модульного тестирования. Запуск тестов выполняется из **Jenkins**. **Selenoid** используется для запуска браузеров в контейнерах **Docker**.
 
@@ -60,7 +61,7 @@ gradle clean test
 > - videoStorage (url адрес с видео прохождения тестов)
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
-### <img src="images/logo/Allure_Report.svg" alt="Allure"/> Allure
+### <img width="4%" title="Allure_Report" src="images/logo/Allure_Report.svg"> Allure
 
 #### Главная страница
 
