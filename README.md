@@ -75,4 +75,8 @@ gradle clean test
 
 <img src="images/screen/Screenshot_4.png" alt="Allure"/>
 
-### <img width="3%" title="Telegram" src="images/screen/Screenshot_5.png"> Telegram
+### <img width="3%" title="Telegram" src="images/logo/Telegram.svg"> Telegram
+
+Настроена отправка оточета ботом в Telegram
+
+<img src="images/screen/Screenshot_5.png" alt="Telegram"/>
