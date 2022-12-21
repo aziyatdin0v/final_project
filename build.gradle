@@ -16,7 +16,8 @@ def allureVersion = "2.20.1",
     ownerVersion = "1.0.12",
     jacksonDatabindVersion = "2.14.1"
 
-allure {
+    allure
+{
     report {
         version.set(allureVersion)
     }

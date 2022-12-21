@@ -3,6 +3,7 @@ package ru.lamoda.tests.ui;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import ru.lamoda.config.Project;
 import ru.lamoda.pages.AuthUserPage;
@@ -14,13 +15,13 @@ import static io.qameta.allure.Allure.step;
 @Owner("aziyatdinov")
 @Feature("UI тесты lamoda.ru")
 @Story("Авторизация пользователя")
+@Tags({@Tag("ui")})
 
 public class AuthUserTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
     AuthUserPage authUserPage = new AuthUserPage();
 
-    @Tag("ui")
     @Test
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Авторизация пользователя (вход в личный кабинет)")

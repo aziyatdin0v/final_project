@@ -20,8 +20,8 @@ import static ru.lamoda.tests.api.specs.SpecsReqres.responseSpec;
 
 //@Layer("api")
 @Owner("aziyatdinov")
-@Story("ReqresIn")
 @Feature("API test")
+@Story("ReqresIn")
 @Tags({@Tag("api")})
 
 public class ReqresInTests {

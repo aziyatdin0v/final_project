@@ -4,6 +4,7 @@ import com.codeborne.selenide.Driver;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -19,12 +20,12 @@ import static org.hamcrest.Matchers.containsString;
 @Owner("aziyatdinov")
 @Feature("UI тесты lamoda.ru")
 @Story("Главная страница lamoda.ru")
+@Tags({@Tag("ui")})
 
 public class MainPageContentTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
 
-    @Tag("ui")
     @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка заголовков стартовой страницы")
@@ -39,7 +40,6 @@ public class MainPageContentTests extends BaseTest {
         });
     }
 
-    @Tag("ui")
     @Severity(SeverityLevel.NORMAL)
     @CsvSource(value = {
             "Женщинам, women",
@@ -65,7 +65,6 @@ public class MainPageContentTests extends BaseTest {
         });
     }
 
-    @Tag("ui")
     @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка рекламного слогана")
@@ -79,7 +78,6 @@ public class MainPageContentTests extends BaseTest {
         });
     }
 
-    @Tag("ui")
     @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка наличия блока c социальными сетями в подвале страницы")
