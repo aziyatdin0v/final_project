@@ -9,7 +9,7 @@
 - [Allure отчет](#-allure)
 - [Уведомления в Telegram](#-telegram)
 - [Видео прохождения тестов](#movie_camera-видео-с-прогоном-тестов)
-- [Интеграция с AllureTestOps](#-Allure_TO)
+- [Интеграция с AllureTestOps](#-Allure-TestOps)
 
 ## :gear: Технологии, используемые в данном проекте
 
