@@ -24,6 +24,7 @@
 <a href="https://github.com/allure-framework/allure2"><img src="images/logo/Allure_Report.svg" width="50" height="50"  alt="Allure" title="Allure"/></a>
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins" title="Jenkins"/></a>
 <a href="https://web.telegram.org/"><img src="images\logo\Telegram.svg" width="50" height="50" alt="Telegram" title="Telegram"></a>
+<a href="https://qameta.io/"><img src="images\logo\Allure_TO.svg" width="50" height="50" alt="Allure_TO" title="Allure_TO"></a>
 </p>
 
 В данном проекте автотесты написаны на **Java** с использованием фреймворка для тестирования **Selenide**. Для сборки проекта в среде **IntelliJ IDEA** используется **Gradle**.
@@ -77,6 +78,29 @@ gradle clean test
 
 ### <img width="3%" title="Telegram" src="images/logo/Telegram.svg"> Telegram
 
-Настроена отправка оточета ботом в Telegram
+Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
 
 <img src="images/screen/Screenshot_5.png" alt="Telegram"/>
+
+## :movie_camera: Видео с прогоном тестов
+
+В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
+
+<p align="center">
+  <img title="Video" src="images/video/Lamoda_tests.gif">
+</p>
+
+## Полная статистика по прохождению тестпланов, отчёты и приложения к ним хранятся в Allure TestOps
+<img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> 
+
+#### Представлены тест-кейсы
+
+<img src="img/screen/TOTest.jpg" alt="TO"/>
+
+#### Представлены дашборды аналитики
+
+<img src="img/screen/TODash.jpg" alt="TO"/>
+
+#### Представлены запуски
+
+<img src="img/screen/TOLaunch.jpg" alt="TO"/>
