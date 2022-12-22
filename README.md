@@ -90,18 +90,18 @@ gradle clean test
   <img title="Video" src="images/video/Lamoda_tests.gif">
 </p>
 
-## <img width="3%" title="Allure_TO" src="images/logo/Allure_TO.svg"> Allure TestOps
+### <img width="3%" title="Allure_TO" src="images/logo/Allure_TO.svg"> Allure TestOps
 
-#### Полная статистика по прохождению тестпланов, отчёты и приложения к ним хранятся в
+## Полная статистика по прохождению тестпланов, отчёты и приложения к ним
 
-#### Представлены тест-кейсы
+## Представлены тест-кейсы
 
 <img src="images/screen/Allure_TestOps_Test_Cases.png" alt="TO"/>
 
-#### Представлены дашборды аналитики
+## Представлены дашборды аналитики
 
 <img src="images/screen/Allure_TestOps_Dashboards.png" alt="TO"/>
 
-#### Представлены запуски
+## Представлены запуски
 
 <img src="images/screen/Allure_TestOps_Launches.png" alt="TO"/>
