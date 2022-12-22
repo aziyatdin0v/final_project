@@ -9,7 +9,7 @@
 - [Allure отчет](#-allure)
 - [Уведомления в Telegram](#-telegram)
 - [Видео прохождения тестов](#movie_camera-видео-с-прогоном-тестов)
-- [Интеграция с AllureTestOps](#-полная_статистика_по_прохождению_тестпланов)
+- [Интеграция с AllureTestOps](#-Allure TestOps)
 
 ## :gear: Технологии, используемые в данном проекте
 
@@ -90,8 +90,9 @@ gradle clean test
   <img title="Video" src="images/video/Lamoda_tests.gif">
 </p>
 
-## Полная статистика по прохождению тестпланов, отчёты и приложения к ним хранятся в Allure TestOps
-<img width="3%" title="Allure_TO" src="images/logo/Allure_TO.svg"> 
+## <img width="3%" title="Allure_TO" src="images/logo/Allure_TO.svg"> Allure TestOps
+
+#### Полная статистика по прохождению тестпланов, отчёты и приложения к ним хранятся в
 
 #### Представлены тест-кейсы
 
