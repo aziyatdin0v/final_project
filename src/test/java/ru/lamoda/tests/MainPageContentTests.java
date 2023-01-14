@@ -1,6 +1,5 @@
-package ru.lamoda.tests.ui;
+package ru.lamoda.tests;
 
-import com.codeborne.selenide.Driver;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -8,7 +7,6 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import ru.lamoda.drivers.DriverSettings;
 import ru.lamoda.pages.MainPage;
 import ru.lamoda.tests.BaseTest;
 
@@ -36,7 +34,8 @@ public class MainPageContentTests extends BaseTest {
             assertThat(title(), containsString(mainPage.TITLE));
         });
         step("Проверяем наличие заголовка страницы", () -> {
-            mainPage.checkHeader();
+            mainPage.checkHeader()
+                    .cookieButtonClick();;
         });
     }
 

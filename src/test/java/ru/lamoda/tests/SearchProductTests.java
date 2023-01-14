@@ -1,4 +1,4 @@
-package ru.lamoda.tests.ui;
+package ru.lamoda.tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
