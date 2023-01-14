@@ -33,6 +33,5 @@ public class BaseTest {
         step("Очищаем cookies", () -> {
             clearBrowserCookies();
         });
-        closeWebDriver();
     }
 }
