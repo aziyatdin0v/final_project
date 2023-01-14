@@ -40,3 +40,4 @@ target/
 .todo
 *.properties
 /allure-report/
+/allure-report/widgets/
