@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import ru.lamoda.pages.MainPage;
 import ru.lamoda.tests.BaseTest;
 
@@ -40,20 +41,16 @@ public class MainPageContentTests extends BaseTest {
     }
 
     @Severity(SeverityLevel.NORMAL)
-    @CsvSource(value = {
-            "Женщинам, women",
-            "Мужчинам, men",
-            "Детям, children"
-    })
+    @ValueSource(strings = {"Женщинам", "Мужчинам", "Детям"})
     @ParameterizedTest(name = "\"{0}\"")
     @DisplayName("Проверка наличия разделов на стартовой странице")
-    void testGenderMenu(String gender, String expectedText) {
+    void testGenderMenu(String gender) {
         step("Открываем главную страницу", () -> {
             mainPage.openPage()
                     .cookieButtonClick();
         });
         step("Переходим в раздел " + gender + "", () -> {
-            mainPage.chooseChapter(expectedText);
+            mainPage.chooseChapter(gender);
         });
         step("Проверяем раздел в главном меню", () -> {
             mainPage.checkChapter(gender);

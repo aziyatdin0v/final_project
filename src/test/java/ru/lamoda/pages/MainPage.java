@@ -6,6 +6,7 @@ import com.codeborne.selenide.WebDriverRunner;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,9 +23,9 @@ public class MainPage {
             menuButtonIdea = $("._root_a9l6y_8"),
             advertisingTitle = $("._container_wwzzd_15 ._title_1n789_18"),
             advertisingSubTitle = $("._container_wwzzd_15 ._subTitle_1n789_23"),
-            vkButton = $(".social-items a[aria-label=\"vk\"]"),
-            youtubeButton = $(".social-items a[aria-label=\"youtube\"]"),
-            telegramButton = $(".social-items a[aria-label=\"telegram\"]"),
+            vkButton = $(".x-footer__bottom a[aria-label=\"vk\"]"),
+            youtubeButton = $(".x-footer__bottom a[aria-label=\"youtube\"]"),
+            telegramButton = $(".x-footer__bottom a[aria-label=\"telegram\"]"),
             headerGender = $(".tizer-gender-select");
 
     public MainPage openPage() {
@@ -64,13 +65,13 @@ public class MainPage {
         return this;
     }
 
-    public MainPage chooseChapter(String expectedText) {
-        $(".js-ibanner-bg-image[data-gender=\"" + expectedText + "\"]").click();
+    public MainPage chooseChapter(String gender) {
+        $(byText(gender)).click();
         return this;
     }
 
     public MainPage checkChapter(String gender) {
-        $("._root_1o7df_2 a[data-active=\"true\"]").shouldHave(text(gender));
+        $("[role=menubar] a[data-active=\"true\"]").shouldHave(text(gender));
         return this;
     }
 }
