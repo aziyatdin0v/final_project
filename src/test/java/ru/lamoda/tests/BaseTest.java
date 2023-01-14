@@ -9,6 +9,7 @@ import ru.lamoda.drivers.DriverSettings;
 import ru.lamoda.helpers.Attach;
 
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static io.qameta.allure.Allure.step;
 
 public class BaseTest {
@@ -29,9 +30,9 @@ public class BaseTest {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
-
         step("Очищаем cookies", () -> {
             clearBrowserCookies();
         });
+        closeWebDriver();
     }
 }
