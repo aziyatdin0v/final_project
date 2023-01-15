@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import ru.lamoda.config.Project;
 import ru.lamoda.pages.AuthUserPage;
 import ru.lamoda.pages.MainPage;
-import ru.lamoda.tests.BaseTest;
 
 import static io.qameta.allure.Allure.step;
 
