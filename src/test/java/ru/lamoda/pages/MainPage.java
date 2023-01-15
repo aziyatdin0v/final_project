@@ -15,7 +15,6 @@ public class MainPage {
     public static final String TITLE = "Интернет магазин одежды и обуви. Купить обувь, купить одежду, аксессуары в онлайн магазине Lamoda.ru";
     private static final String ADVERTISING_TITLE = "Все идеи в одном месте!";
     private static final String SUB_ADVERTISING_TITLE = "Читайте лучшие инсайты наших редакторов";
-    private static final String HEADER = "Выберите интересующий вас раздел";
 
     private SelenideElement
             notificationCookie = $("._text_zj82w_18"),
@@ -26,7 +25,7 @@ public class MainPage {
             vkButton = $(".x-footer__bottom a[aria-label=\"vk\"]"),
             youtubeButton = $(".x-footer__bottom a[aria-label=\"youtube\"]"),
             telegramButton = $(".x-footer__bottom a[aria-label=\"telegram\"]"),
-            headerGender = $(".tizer-gender-select");
+            headerLogo = $(".router-link-active[aria-label=\"Главная\"]");
 
     public MainPage openPage() {
         open("/");
@@ -60,8 +59,8 @@ public class MainPage {
         return this;
     }
 
-    public MainPage checkHeader() {
-        headerGender.shouldHave(text(HEADER));
+    public MainPage checkLogo() {
+        headerLogo.should(appear);
         return this;
     }
 

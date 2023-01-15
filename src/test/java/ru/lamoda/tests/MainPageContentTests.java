@@ -34,8 +34,8 @@ public class MainPageContentTests extends BaseTest {
                     .cookieButtonClick();
             assertThat(title(), containsString(mainPage.TITLE));
         });
-        step("Проверяем наличие заголовка страницы", () -> {
-            mainPage.checkHeader()
+        step("Проверяем наличие лого", () -> {
+            mainPage.checkLogo()
                     .cookieButtonClick();;
         });
     }
