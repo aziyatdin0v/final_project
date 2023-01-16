@@ -53,6 +53,7 @@ public class MainPage {
     }
 
     public MainPage checkSocialNetworkButton() {
+        $("._root_wkuno_2").scrollIntoView(true);
         vkButton.should(appear);
         youtubeButton.should(appear);
         telegramButton.should(appear);
