@@ -1,7 +1,6 @@
 plugins {
     id 'java-library'
     id 'io.qameta.allure' version '2.11.0'
-    id "io.freefair.lombok" version "6.0.0-m2"
 }
 
 repositories {
@@ -10,11 +9,10 @@ repositories {
 
 def allureVersion = "2.20.1",
     restAssuredVersion = "5.3.0",
-    selenideVersion = "6.10.2",
+    selenideVersion = "6.11.0",
     junitVersion = "5.9.1",
     slf4jVersion = "2.0.6",
-    ownerVersion = "1.0.12",
-    jacksonDatabindVersion = "2.14.1"
+    ownerVersion = "1.0.12"
 
 allure
         {
@@ -39,8 +37,7 @@ dependencies {
             "io.qameta.allure:allure-selenide:$allureVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
-            "org.aeonbits.owner:owner:$ownerVersion",
-            "com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion",
+            "org.aeonbits.owner:owner:$ownerVersion"
     )
 }
 
