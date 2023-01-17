@@ -21,7 +21,7 @@ import static io.qameta.allure.Allure.step;
 public class SearchProductTests extends BaseTest {
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
-    
+
     @Severity(SeverityLevel.NORMAL)
     @ValueSource(strings = {"Футболки", "Шорты"})
     @ParameterizedTest(name = "{0}")

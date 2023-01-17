@@ -15,7 +15,7 @@ public class AuthUserPage {
             emailInput = $(".input__input[name=\"login\"]"),
             passwordInput = $(".input__input[name=\"password\"]"),
             submitButton = $(".x-button[type=\"submit\"]"),
-            modalWindow = $(".d-modal"),
+            modalWindow = $(".d-modal__frame"),
             modalWindowButton = $(".d-modal__bottom .x-button"),
             profileButton = $x("//a[text()=\"Профиль\"]"),
 
