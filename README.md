@@ -2,14 +2,14 @@
 
 ## :open_book: Содержание:
 
-- [Технологии и инструменты](#gear-Технологии-и-инструменты)
+- [Технологии и инструменты](#gear-технологии-и-инструменты)
 - [Тест кейсы](#heavy_check_mark-Тест-кейсы)
 - [Запуск тестов](#computer-запуск-тестов-из-терминала)
 - [Примеры использования](#примеры-использования)
 - [Запуск тестов в Jenkins](#-запуск-тестов-из-jenkins)
-- [Allure отчет](#-allure)
-- [Интеграция с Allure TestOps](#-Allure-TestOps)
-- [Уведомления в Telegram](#-telegram)
+- [Отчет о результатах тестирования в Allure Report](#-отчет-о-результатах-тестирования-в-Allure-report)
+- [Интеграция с Allure TestOps](#-интеграция-с-allure-testops)
+- [Уведомления в Telegram](#-уведомления-в-telegram)
 - [Видео прохождения тестов](#movie_camera-видео-с-прогоном-тестов)
 
 ## :gear: Технологии и инструменты
@@ -68,7 +68,7 @@ gradle clean test
 * browser (браузер, по умолчанию chrome)
 * browserVersion (версия браузера, по умолчанию 100.0)
 * browserSize (размер окна браузера, по умолчанию 1920x1080)
-* remoteDriverUrl (url адресс selenoid)
+* remoteDriverUrl (url адрес selenoid)
 * videoStorage (url адрес с видео прохождения тестов)
 
 ## <img width="4%" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_ui/)
