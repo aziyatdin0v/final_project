@@ -22,10 +22,10 @@ public class MainPage {
             menuButtonIdea = $("._root_a9l6y_8"),
             advertisingTitle = $("._container_wwzzd_15 ._title_1n789_18"),
             advertisingSubTitle = $("._container_wwzzd_15 ._subTitle_1n789_23"),
-            socialBlock = $("._root_wkuno_2"),
-            vkButton = $(".x-footer__bottom a[aria-label=\"vk\"]"),
-            youtubeButton = $(".x-footer__bottom a[aria-label=\"youtube\"]"),
-            telegramButton = $(".x-footer__bottom a[aria-label=\"telegram\"]"),
+            socialBlock = $(".social-items"),
+            vkButton = $(".social-items a[aria-label=\"vk\"]"),
+            youtubeButton = $(".social-items a[aria-label=\"youtube\"]"),
+            telegramButton = $(".social-items a[aria-label=\"telegram\"]"),
             headerLogo = $(".router-link-active[aria-label=\"Главная\"]"),
             genderMenu = $("[role=menubar] a[data-active=\"true\"]");
 
