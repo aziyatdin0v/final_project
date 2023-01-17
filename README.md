@@ -8,9 +8,9 @@
 - [Примеры использования](#примеры-использования)
 - [Запуск тестов в Jenkins](#-запуск-тестов-из-jenkins)
 - [Allure отчет](#-allure)
+- [Интеграция с Allure TestOps](#-Allure-TestOps)
 - [Уведомления в Telegram](#-telegram)
 - [Видео прохождения тестов](#movie_camera-видео-с-прогоном-тестов)
-- [Интеграция с Allure TestOps](#-Allure-TestOps)
 
 ## :gear: Технологии и инструменты
 
@@ -43,7 +43,7 @@
 - Проверка наличия блока c социальными сетями в подвале страницы
 - Проверка поиска заданного товара
 
-## :computer: Запуск тестов
+## :computer: Запуск тестов из терминала
 
 ### :house_with_garden:	Локальный запуск тестов
 
@@ -51,7 +51,7 @@
 gradle clean test
 ```
 
-### :earth_asia: Удаленный запуск тестов из Jenkins
+### :earth_asia: Удаленный запуск тестов
 
 ```bash
 gradle clean test
@@ -70,45 +70,52 @@ gradle clean test
 * browserSize (размер окна браузера, по умолчанию 1920x1080)
 * remoteDriverUrl (url адресс selenoid)
 * videoStorage (url адрес с видео прохождения тестов)
-* threads (количество потоков)
 
-Запуск тестов с заполненным remote.properties:
-```bash
-gradle clean test
-```
-
-Запуск тестов с незаполненным remote.properties:
-```bash
-gradle clean test -Dbrowser=chrome -DbrowserVersion=100.0 -DbrowserSize=1920x1080 -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1
-```
-
-## <img width="4%" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_web/)
+## <img width="4%" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_ui/)
 Для запуска сборки необходимо перейти в раздел <code><strong>*Собрать с параметрами*</strong></code> и нажать кнопку <code><strong>*Собрать*</strong></code>.
 
 <p align="center">
   <img src="media/screen/start_jenkins.png" alt="Jenkins" width="800">
 </p>
 
-## :bar_chart: Отчеты о прохождении тестов доступны в Allure
-### <img width="4%" title="Allure_Report" src="media/logo/Allure_Report.svg"> Allure
+После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится
+значок *Allure Report* и *Allure TestOps* кликнув по которому, откроется страница с сформированным html-отчетом и тестовой документацией.
 
-#### Главная страница
+## <img width="4%" title="Allure Report" src="media/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_ui/1/allure/)
 
-<img src="media/screen/Screenshot_2.png" alt="Allure"/>
+<p align="center">
+  <img src="media/screen/jenkins_overview.png" alt="allure-report" width="900">
+</p>
 
-#### Графики
+<p align="center">
+  <img src="media/screen/jenkins_behaviors.png" alt="allure-report_1" width="900">
+</p>
 
-<img src="media/screen/Screenshot_3.png" alt="Allure"/>
+## <img width="4%" title="Allure TestOPS" src="media/logo/Allure_TO.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/18485)
 
-#### Тесты
+### Основной дашборд
 
-<img src="media/screen/Screenshot_4.png" alt="Allure"/>
+<p align="center">
+  <img src="media/screen/dashboards.png" alt="dashboard" width="900">
+</p>
 
-### <img width="3%" title="Telegram" src="media/logo/Telegram.svg"> Telegram
+### Список тестов с результатами прогона
 
-Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
+<p align="center">
+  <img src="media/screen/allure-testops-results.png" alt="dashboard" width="900">
+</p>
 
-<img src="media/screen/Screenshot_5.png" alt="Telegram"/>
+### Тест-кейсы
+
+<p align="center">
+  <img src="media/screen/allure-testops-testcases.png" alt="testcase" width="900">
+</p>
+
+## <img width="4%" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram
+После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
+
+<p align="center">
+<img title="Telegram Notifications" src="media/screen/notifications.png">
 
 ## :movie_camera: Видео с прогоном тестов
 
@@ -117,19 +124,3 @@ gradle clean test -Dbrowser=chrome -DbrowserVersion=100.0 -DbrowserSize=1920x108
 <p align="center">
   <img title="Video" src="media/video/Lamoda_tests.gif">
 </p>
-
-## <img width="3%" title="Allure_TO" src="media/logo/Allure_TO.svg"> Allure TestOps
-
-## Полная статистика по прохождению тестпланов, отчёты и приложения к ним
-
-### Представлены тест-кейсы
-
-<img src="media/screen/Allure_TestOps_Test_Cases.png" alt="TO"/>
-
-### Представлены дашборды аналитики
-
-<img src="media/screen/Allure_TestOps_Dashboards.png" alt="TO"/>
-
-### Представлены запуски
-
-<img src="media/screen/Allure_TestOps_Launches.png" alt="TO"/>
