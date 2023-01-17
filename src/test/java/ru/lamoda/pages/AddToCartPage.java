@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class AddToCartPage {
 
-    //private static final String URL_PRODUCT = "/p/rtlabw776801/clothes-uniqlo-futbolka/";
+    private static final String URL_PRODUCT = "/p/rtlabw776801/clothes-uniqlo-futbolka/";
 
     SelenideElement
             dropdownSizes = $x("//div[text()=\"Выберите размер\"]"),
@@ -16,7 +16,7 @@ public class AddToCartPage {
             popupText = $(".d-modal__frame .d-modal__header");
 
     public AddToCartPage openPage() {
-        open("/p/rtlabw776801/clothes-uniqlo-futbolka/");
+        open(URL_PRODUCT);
         return this;
     }
 
@@ -35,5 +35,4 @@ public class AddToCartPage {
         popupText.shouldHave(text("Товар добавлен в корзину"));
         return this;
     }
-
 }
