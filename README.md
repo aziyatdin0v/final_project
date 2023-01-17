@@ -59,7 +59,6 @@ gradle clean test
 -DbrowserVersion=${browserVersion}
 -DbrowserSize=${browserSize}
 -DremoteDriverUrl=https://%s:%s@${REMOTE_DRIVER_URL}/wd/hub/
--DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
 ```
 ## Примеры использования
 
@@ -71,6 +70,10 @@ gradle clean test
 * remoteDriverUrl (url адрес selenoid)
 * videoStorage (url адрес с видео прохождения тестов)
 
+Логин и пароль извлекаются из соответствующего файла конфигурации:
+```bash
+./resources/config/credentials.properties
+```
 ## <img width="4%" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_ui/)
 Для запуска сборки необходимо перейти в раздел <code><strong>*Собрать с параметрами*</strong></code> и нажать кнопку <code><strong>*Собрать*</strong></code>.
 
