@@ -43,8 +43,7 @@ public class MainPageContentTests extends BaseTest {
     @DisplayName("Проверка наличия разделов на стартовой странице")
     void testGenderMenu(String gender) {
         step("Открываем главную страницу", () -> {
-            mainPage.openPage()
-                    .cookieButtonClick();
+            mainPage.openPage();
         });
         step("Переходим в раздел " + gender + "", () -> {
             mainPage.chooseChapter(gender);
@@ -63,8 +62,7 @@ public class MainPageContentTests extends BaseTest {
     @DisplayName("Проверка рекламного слогана")
     void testAdvertising() {
         step("Открываем главную страницу", () -> {
-            mainPage.openPage()
-                    .cookieButtonClick();
+            mainPage.openPage();
         });
         step("Проверяем текст рекламного слогана", () -> {
             mainPage.checkAdvertisingTitle();
@@ -76,8 +74,7 @@ public class MainPageContentTests extends BaseTest {
     @DisplayName("Проверка наличия блока c социальными сетями в подвале страницы")
     void testSocialNetwork() {
         step("Открываем главную страницу", () -> {
-            mainPage.openPage()
-                    .cookieButtonClick();
+            mainPage.openPage();
         });
         step("Проверяем, что на главной странице есть блок с социальными сетями", () -> {
             mainPage.checkSocialNetworkButton();
